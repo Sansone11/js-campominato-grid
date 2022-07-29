@@ -8,7 +8,7 @@ console.log('JS ok')
 let dimensioneGriglia = 10;
 let numeroCelle = dimensioneGriglia ** 2;
 // aggiungi un evento al bottone una volta premuto il main deve diventare display block
-button.addEventListener('click');
+button = document.addEventListener('click');
 // inserisci la funzione main diventa display block
 function getButton() {
     document.querySelector("main").innerHTML = "display";
