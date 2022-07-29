@@ -9,8 +9,8 @@
     --bg-button:#D5D5DB;
 }
 
-main{
-    min-height: 100vh;
+.container{
+    min-height:400px ;
     display: none;
 }
 
@@ -46,7 +46,8 @@ body{
     display: grid;
     grid-template-columns: repeat(10,1fr);
     aspect-ratio: 1/1;
-    background-color:lightgray; 
+    
+     
 }
 
 .square{
@@ -59,11 +60,12 @@ body{
 }
 
 .square.clicked{
-    background-color: red;
+    background-color: rgb(18, 101, 234);
     
 }
 
 .ending{
-    
+    height: 100px;
+    width: 100%;
     background-color: white;
 }

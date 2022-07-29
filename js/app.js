@@ -5,13 +5,10 @@ console.log('JS ok')
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro ed emetto un messaggio in console con il numero della cella cliccata.
 
 // crea le dimensioni della griglia
-// let dimensioneGriglia = 10;
-// let numeroCelle = dimensioneGriglia ** 2;
-// const tabelloneEl = document.querySelector('.tabellone')
 // aggiungi un evento al bottone una volta premuto il main class(container) deve diventare display block
 const dimensioneGriglia = 10;
 const numeroCelle = dimensioneGriglia ** 2;
-const tabelloneEl = document.querySelector('.tabellone')
+const tabelloneEl = document.querySelector('.tabellone');
 
 button = document.addEventListener('click', function () {
     let buttonStart = document.querySelector(".container").style.display = "block";
@@ -32,11 +29,13 @@ function getSquareElelment() {
     square.addEventListener('click', clickHandler)
     console.log(square)
     return square
-}
+};
 
-function clickHandler() {
+function clickHandler(event) {
     // console.log(this)
     const square = this
     square.classList.toggle('clicked')
+    // rimuovo l'evento
+    square.removeEventListener('click', clickHandler)
 
-}
+};
