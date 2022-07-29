@@ -18,9 +18,10 @@ button = document.addEventListener('click', function () {
 
     for (let i = 0; i < numeroCelle; i++) {
         const cella = getSquareElelment()
-        cella.hinnerHTML = i + 1;
+        cella.innerHTML = i + 1;
         tabelloneEl.append(cella)
     }
+    
 });
 
 function getSquareElelment() {
@@ -28,6 +29,13 @@ function getSquareElelment() {
     const square = document.createElement('div')
     //     // aggiungi le celle (square) ai div
     square.classList.add('square')
-    //     // square.addEventListener('click')
+    square.addEventListener('click',clickHandler)
+    // console.log(square)
     return square
-// }
+}
+
+function clickHandler(event){
+    console.log(event, event.target)
+    square.classList.toggle('clicked')
+
+}
