@@ -7,11 +7,13 @@ console.log('JS ok')
 // crea le dimensioni della griglia
 let dimensioneGriglia = 10;
 let numeroCelle = dimensioneGriglia ** 2;
-// aggiungi un evento al bottone una volta premuto il main deve diventare display block
-button = document.addEventListener('click');
+// aggiungi un evento al bottone una volta premuto il main class(container) deve diventare display block
+button = document.addEventListener('click',function(){
+    let buttonStart = document.querySelector(".container").style.display = "block";;
+});
 // inserisci la funzione main diventa display block
 function getButton() {
-    document.querySelector("main").innerHTML = "display";
+    
 }
 
 // prendi la classe tabellone 
@@ -28,6 +30,6 @@ function getSquareElelment() {
     const square = document.createElement('div')
     // aggiungi le celle (square) ai div
     square.classList.add('square')
-    square.addEventListener('click')
+    // square.addEventListener('click')
     return square
 }

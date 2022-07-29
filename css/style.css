@@ -62,3 +62,8 @@ body{
 .square.clicked{
     background-color: azure;
 }
+
+.ending{
+    
+    background-color: white;
+}
