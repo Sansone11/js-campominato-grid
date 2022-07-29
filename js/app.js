@@ -9,33 +9,34 @@ console.log('JS ok')
 // let numeroCelle = dimensioneGriglia ** 2;
 // const tabelloneEl = document.querySelector('.tabellone')
 // aggiungi un evento al bottone una volta premuto il main class(container) deve diventare display block
-let dimensioneGriglia = 10;
-let numeroCelle = dimensioneGriglia ** 2;
+const dimensioneGriglia = 10;
+const numeroCelle = dimensioneGriglia ** 2;
+const tabelloneEl = document.querySelector('.tabellone')
 
 button = document.addEventListener('click', function () {
     let buttonStart = document.querySelector(".container").style.display = "block";
-    const tabelloneEl = document.querySelector('.tabellone')
-
     for (let i = 0; i < numeroCelle; i++) {
         const cella = getSquareElelment()
         cella.innerHTML = i + 1;
         tabelloneEl.append(cella)
     }
-    
-});
 
+});
+// crea le celle
 function getSquareElelment() {
     //     // crea degli elementi div 
     const square = document.createElement('div')
     //     // aggiungi le celle (square) ai div
     square.classList.add('square')
-    square.addEventListener('click',clickHandler)
-    // console.log(square)
+    // creo un evento ed assegno solo il nome della funzione
+    square.addEventListener('click', clickHandler)
+    console.log(square)
     return square
 }
 
-function clickHandler(event){
-    console.log(event, event.target)
+function clickHandler() {
+    // console.log(this)
+    const square = this
     square.classList.toggle('clicked')
 
 }
